@@ -1,5 +1,7 @@
+package loginPackage;
+
+import base.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -8,7 +10,7 @@ public class LoginIUA extends BaseTest {
 
 
 
-    @Test
+    @Test(groups = "Positive")
     public void loginIUA(){
         getWebDriver().get("https://passport.i.ua/login/");
         getWebDriver().findElement(By.xpath("//*[@name='login']")).sendKeys("testfort.summer2021@i.ua");
@@ -18,7 +20,7 @@ public class LoginIUA extends BaseTest {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@title='выйти']")));
     }
 
-    @Test
+    @Test(groups = "Negative")
     public void loginIUANegative(){
         getWebDriver().get("https://passport.i.ua/login/");
         getWebDriver().findElement(By.xpath("//*[@name='login']")).sendKeys("testfort.summer2021@i.ua");

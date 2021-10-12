@@ -1,3 +1,5 @@
+package pageObjects;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,13 +9,13 @@ public class LoginIUAPageFactory {
     private WebDriver webDriver;
 
     @FindBy(xpath = "//*[@name='login']")
-    public WebElement loginInput;
+    private WebElement loginInput;
 
     @FindBy(xpath = "//*[@name='pass']")
-    public WebElement passwordInput;
+    private WebElement passwordInput;
 
     @FindBy(xpath = "//*[@value='Войти']")
-    public WebElement submit;
+    private WebElement submit;
 
     public LoginIUAPageFactory(WebDriver webDriver) {
         this.webDriver = webDriver;
