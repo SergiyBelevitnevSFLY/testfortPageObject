@@ -1,7 +1,6 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite By Groups">
     <test name="By Groups">
-
         <groups>
             <run>
                 <include name="Negative"></include>
