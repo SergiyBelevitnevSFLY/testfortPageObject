@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Selenide.open;
+
 public class LoginIUA extends BaseTest {
 
 
@@ -28,5 +30,12 @@ public class LoginIUA extends BaseTest {
         getWebDriver().findElement(By.xpath("//*[@value='Войти']")).click();
         WebDriverWait webDriverWait = new WebDriverWait(getWebDriver(), 10);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='content clear']")));
+    }
+
+    @Test
+    public void selenideTest(){
+
+        open("https://testautomationu.applitools.com/");
+
     }
 }
