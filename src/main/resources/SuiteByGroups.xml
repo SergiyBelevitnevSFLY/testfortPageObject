@@ -1,13 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite By Groups">
-    <test name="By Groups">
+<suite name="Suite By Groups" verbose="2" configfailurepolicy="continue">
+    <test name="Some Name By Groups">
         <groups>
             <run>
-                <include name="Negative"></include>
+                <include name="Negative"/>
             </run>
         </groups>
         <packages>
-            <package name="loginPackage"></package>
+            <package name="loginPackage"/>
         </packages>
     </test>
 

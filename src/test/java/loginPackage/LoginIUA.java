@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.open;
 
 public class LoginIUA extends BaseTest {
 
@@ -22,7 +21,7 @@ public class LoginIUA extends BaseTest {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@title='выйти']")));
     }
 
-    @Test(groups = "Negative")
+    @Test(groups="Negative")
     public void loginIUANegative(){
         getWebDriver().get("https://passport.i.ua/login/");
         getWebDriver().findElement(By.xpath("//*[@name='login']")).sendKeys("testfort.summer2021@i.ua");
@@ -32,10 +31,4 @@ public class LoginIUA extends BaseTest {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='content clear']")));
     }
 
-    @Test
-    public void selenideTest(){
-
-        open("https://testautomationu.applitools.com/");
-
-    }
 }

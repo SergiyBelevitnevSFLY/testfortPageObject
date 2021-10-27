@@ -17,7 +17,7 @@ public class BaseTest {
     private WebDriver webDriver;
 
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(){
         WebDriverManager.chromedriver().setup();
         WebDriver webDriver = new ChromeDriver();
